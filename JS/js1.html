@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(218, 194, 218);
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+        h1 {
+            display: block;
+            background-image: linear-gradient(to bottom, gray, purple);
+            padding: 10px;
+            
+            color: azure;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.513);
+
+        }
+        p {
+            padding-top: 10px;
+            display: block;
+            background-color: white;
+            color: black;
+            width: 150px;
+            height: 50px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.483);
+            line-height: 45px;
+        }
+
+        div#area {
+            font-weight: bolder;
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            line-height: 200px;
+            font-size: 2em;
+            text-align: center;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <div>
+        <p>Bora de JavaScript </p>
+    </div><br>
+    <div id="msg">
+        Clique em mim
+    </div><br>
+    <div id="area" onclick="clicar()" onmouseenter="entrou()" onmouseout="saiu()">
+        Interaja
+    </div><br>
+    <footer>
+        <button>
+            <a href="index.html">Voltar</a>
+        </button>
+    </footer>
+    <script>
+        window.alert('Site em teste!')
+        var nome = window.prompt('Qual seu nome')
+        window.confirm('Está gostando de JS ' + nome + " !")
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write(p1.innerText,' ', nome)
+        var d = document.querySelector('div#msg')
+        d.style.background = 'white'
+        function clicar() {
+            var a = document.getElementById('area')
+            a.innerText = 'Clicou'
+            a.style.backgroundColor = 'red'
+        }
+        function entrou(){
+            var a = document.getElementById('area')
+            a.innerText = 'Entrou'
+        }
+        function saiu(){
+            var a = document.getElementById('area')
+            a.innerText = 'Saiu'
+            a.style.backgroundColor = 'white'
+        }
+    </script>
+</body>
+</html>
